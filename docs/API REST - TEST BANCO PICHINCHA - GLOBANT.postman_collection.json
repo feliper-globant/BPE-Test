@@ -1,0 +1,3146 @@
+{
+	"info": {
+		"_postman_id": "608751d8-bf42-401d-8d85-48f0f65e8424",
+		"name": "API REST - TEST BANCO PICHINCHA - GLOBANT",
+		"description": "REST API to test developer knowledge.\n\nContact Support:\n Name: Felipe Esteban Riaño Pineda\n Email: felipepineda1997@gmail.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15238535"
+	},
+	"item": [
+		{
+			"name": "account",
+			"item": [
+				{
+					"name": "getAccountByNumber",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/account?number=72192242",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"account"
+							],
+							"query": [
+								{
+									"key": "number",
+									"value": "72192242",
+									"description": "(Required) number"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/account?number=72192242",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"account"
+									],
+									"query": [
+										{
+											"key": "number",
+											"value": "72192242"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/account?number=72192242",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"account"
+									],
+									"query": [
+										{
+											"key": "number",
+											"value": "72192242"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/account?number=72192242",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"account"
+									],
+									"query": [
+										{
+											"key": "number",
+											"value": "72192242"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/account?number=72192242",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"account"
+									],
+									"query": [
+										{
+											"key": "number",
+											"value": "72192242"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "createAccount",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"balance\": 54985736.305489,\n  \"clientId\": \"sint ut in voluptate\",\n  \"number\": 5105800,\n  \"state\": \"sunt velit nostrud sint\",\n  \"type\": \"velit fugiat ut\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/account",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"account"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"balance\": 54985736.305489,\n  \"clientId\": \"sint ut in voluptate\",\n  \"number\": 5105800,\n  \"state\": \"sunt velit nostrud sint\",\n  \"type\": \"velit fugiat ut\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/account",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"account"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						},
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"balance\": 54985736.305489,\n  \"clientId\": \"sint ut in voluptate\",\n  \"number\": 5105800,\n  \"state\": \"sunt velit nostrud sint\",\n  \"type\": \"velit fugiat ut\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/account",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"account"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"balance\": 54985736.305489,\n  \"clientId\": \"sint ut in voluptate\",\n  \"number\": 5105800,\n  \"state\": \"sunt velit nostrud sint\",\n  \"type\": \"velit fugiat ut\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/account",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"account"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"balance\": 54985736.305489,\n  \"clientId\": \"sint ut in voluptate\",\n  \"number\": 5105800,\n  \"state\": \"sunt velit nostrud sint\",\n  \"type\": \"velit fugiat ut\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/account",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"account"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"balance\": 54985736.305489,\n  \"clientId\": \"sint ut in voluptate\",\n  \"number\": 5105800,\n  \"state\": \"sunt velit nostrud sint\",\n  \"type\": \"velit fugiat ut\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/account",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"account"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "deleteAccountById",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/account?number=72192242",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"account"
+							],
+							"query": [
+								{
+									"key": "number",
+									"value": "72192242",
+									"description": "(Required) number"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/account?number=72192242",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"account"
+									],
+									"query": [
+										{
+											"key": "number",
+											"value": "72192242"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						},
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/account?number=72192242",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"account"
+									],
+									"query": [
+										{
+											"key": "number",
+											"value": "72192242"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/account?number=72192242",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"account"
+									],
+									"query": [
+										{
+											"key": "number",
+											"value": "72192242"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/account?number=72192242",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"account"
+									],
+									"query": [
+										{
+											"key": "number",
+											"value": "72192242"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "client",
+			"item": [
+				{
+					"name": "getClientById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/client?clientId=pariatur minim labore",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"client"
+							],
+							"query": [
+								{
+									"key": "clientId",
+									"value": "pariatur minim labore",
+									"description": "(Required) clientId"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/client?clientId=pariatur minim labore",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"client"
+									],
+									"query": [
+										{
+											"key": "clientId",
+											"value": "pariatur minim labore"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/client?clientId=pariatur minim labore",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"client"
+									],
+									"query": [
+										{
+											"key": "clientId",
+											"value": "pariatur minim labore"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/client?clientId=pariatur minim labore",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"client"
+									],
+									"query": [
+										{
+											"key": "clientId",
+											"value": "pariatur minim labore"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/client?clientId=pariatur minim labore",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"client"
+									],
+									"query": [
+										{
+											"key": "clientId",
+											"value": "pariatur minim labore"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "createClient",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"address\": \"ut velit\",\n  \"age\": -47352915,\n  \"clientId\": \"esse cillum qui\",\n  \"gender\": \"esse\",\n  \"id\": -59387613,\n  \"name\": \"eiusmod pariatur\",\n  \"password\": \"labore aute dolor laboris\",\n  \"phone\": \"amet\",\n  \"state\": \"qui proident ut deserunt eiusmod\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/client",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"client"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"address\": \"ut velit\",\n  \"age\": -47352915,\n  \"clientId\": \"esse cillum qui\",\n  \"gender\": \"esse\",\n  \"id\": -59387613,\n  \"name\": \"eiusmod pariatur\",\n  \"password\": \"labore aute dolor laboris\",\n  \"phone\": \"amet\",\n  \"state\": \"qui proident ut deserunt eiusmod\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/client",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"client"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						},
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"address\": \"ut velit\",\n  \"age\": -47352915,\n  \"clientId\": \"esse cillum qui\",\n  \"gender\": \"esse\",\n  \"id\": -59387613,\n  \"name\": \"eiusmod pariatur\",\n  \"password\": \"labore aute dolor laboris\",\n  \"phone\": \"amet\",\n  \"state\": \"qui proident ut deserunt eiusmod\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/client",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"client"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"address\": \"ut velit\",\n  \"age\": -47352915,\n  \"clientId\": \"esse cillum qui\",\n  \"gender\": \"esse\",\n  \"id\": -59387613,\n  \"name\": \"eiusmod pariatur\",\n  \"password\": \"labore aute dolor laboris\",\n  \"phone\": \"amet\",\n  \"state\": \"qui proident ut deserunt eiusmod\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/client",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"client"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"address\": \"ut velit\",\n  \"age\": -47352915,\n  \"clientId\": \"esse cillum qui\",\n  \"gender\": \"esse\",\n  \"id\": -59387613,\n  \"name\": \"eiusmod pariatur\",\n  \"password\": \"labore aute dolor laboris\",\n  \"phone\": \"amet\",\n  \"state\": \"qui proident ut deserunt eiusmod\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/client",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"client"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"address\": \"ut velit\",\n  \"age\": -47352915,\n  \"clientId\": \"esse cillum qui\",\n  \"gender\": \"esse\",\n  \"id\": -59387613,\n  \"name\": \"eiusmod pariatur\",\n  \"password\": \"labore aute dolor laboris\",\n  \"phone\": \"amet\",\n  \"state\": \"qui proident ut deserunt eiusmod\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/client",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"client"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "deleteClientById",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/client?id=pariatur minim labore",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"client"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "pariatur minim labore",
+									"description": "(Required) id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/client?id=pariatur minim labore",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"client"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "pariatur minim labore"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						},
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/client?id=pariatur minim labore",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"client"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "pariatur minim labore"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/client?id=pariatur minim labore",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"client"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "pariatur minim labore"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/client?id=pariatur minim labore",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"client"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "pariatur minim labore"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "person",
+			"item": [
+				{
+					"name": "getPersonById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/person?id=72192242",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"person"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "72192242",
+									"description": "(Required) id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/person?id=72192242",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"person"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "72192242"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/person?id=72192242",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"person"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "72192242"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/person?id=72192242",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"person"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "72192242"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/person?id=72192242",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"person"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "72192242"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "createPerson",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"address\": \"sed exercitation non sit consequat\",\n  \"age\": -95069976,\n  \"gender\": \"esse dolore laborum eiusmod\",\n  \"id\": 1217996,\n  \"name\": \"culpa in Duis elit\",\n  \"phone\": \"consectetur Excepteur Ut\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/person",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"person"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"address\": \"sed exercitation non sit consequat\",\n  \"age\": -95069976,\n  \"gender\": \"esse dolore laborum eiusmod\",\n  \"id\": 1217996,\n  \"name\": \"culpa in Duis elit\",\n  \"phone\": \"consectetur Excepteur Ut\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/person",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"person"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						},
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"address\": \"sed exercitation non sit consequat\",\n  \"age\": -95069976,\n  \"gender\": \"esse dolore laborum eiusmod\",\n  \"id\": 1217996,\n  \"name\": \"culpa in Duis elit\",\n  \"phone\": \"consectetur Excepteur Ut\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/person",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"person"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"address\": \"sed exercitation non sit consequat\",\n  \"age\": -95069976,\n  \"gender\": \"esse dolore laborum eiusmod\",\n  \"id\": 1217996,\n  \"name\": \"culpa in Duis elit\",\n  \"phone\": \"consectetur Excepteur Ut\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/person",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"person"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"address\": \"sed exercitation non sit consequat\",\n  \"age\": -95069976,\n  \"gender\": \"esse dolore laborum eiusmod\",\n  \"id\": 1217996,\n  \"name\": \"culpa in Duis elit\",\n  \"phone\": \"consectetur Excepteur Ut\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/person",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"person"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"address\": \"sed exercitation non sit consequat\",\n  \"age\": -95069976,\n  \"gender\": \"esse dolore laborum eiusmod\",\n  \"id\": 1217996,\n  \"name\": \"culpa in Duis elit\",\n  \"phone\": \"consectetur Excepteur Ut\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/person",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"person"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "deletePersonById",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/person?id=72192242",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"person"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "72192242",
+									"description": "(Required) id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/person?id=72192242",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"person"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "72192242"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						},
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/person?id=72192242",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"person"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "72192242"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/person?id=72192242",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"person"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "72192242"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/person?id=72192242",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"person"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "72192242"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "transaction",
+			"item": [
+				{
+					"name": "getTransactionById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/transaction?id=pariatur minim labore",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"transaction"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "pariatur minim labore",
+									"description": "(Required) id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/transaction?id=pariatur minim labore",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transaction"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "pariatur minim labore"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/transaction?id=pariatur minim labore",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transaction"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "pariatur minim labore"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/transaction?id=pariatur minim labore",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transaction"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "pariatur minim labore"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/transaction?id=pariatur minim labore",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transaction"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "pariatur minim labore"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "createTransaction",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"balance\": -38298834.7607228,\n  \"date\": \"1981-07-28T10:58:16.765Z\",\n  \"id\": \"nostrud quis nisi laboris in\",\n  \"initialBalance\": -77214441.17132865,\n  \"number\": -99870439,\n  \"type\": \"ad quis velit\",\n  \"value\": -74264678.13336876\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/transaction",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"transaction"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"balance\": -38298834.7607228,\n  \"date\": \"1981-07-28T10:58:16.765Z\",\n  \"id\": \"nostrud quis nisi laboris in\",\n  \"initialBalance\": -77214441.17132865,\n  \"number\": -99870439,\n  \"type\": \"ad quis velit\",\n  \"value\": -74264678.13336876\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/transaction",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transaction"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						},
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"balance\": -38298834.7607228,\n  \"date\": \"1981-07-28T10:58:16.765Z\",\n  \"id\": \"nostrud quis nisi laboris in\",\n  \"initialBalance\": -77214441.17132865,\n  \"number\": -99870439,\n  \"type\": \"ad quis velit\",\n  \"value\": -74264678.13336876\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/transaction",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transaction"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"balance\": -38298834.7607228,\n  \"date\": \"1981-07-28T10:58:16.765Z\",\n  \"id\": \"nostrud quis nisi laboris in\",\n  \"initialBalance\": -77214441.17132865,\n  \"number\": -99870439,\n  \"type\": \"ad quis velit\",\n  \"value\": -74264678.13336876\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/transaction",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transaction"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"balance\": -38298834.7607228,\n  \"date\": \"1981-07-28T10:58:16.765Z\",\n  \"id\": \"nostrud quis nisi laboris in\",\n  \"initialBalance\": -77214441.17132865,\n  \"number\": -99870439,\n  \"type\": \"ad quis velit\",\n  \"value\": -74264678.13336876\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/transaction",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transaction"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"balance\": -38298834.7607228,\n  \"date\": \"1981-07-28T10:58:16.765Z\",\n  \"id\": \"nostrud quis nisi laboris in\",\n  \"initialBalance\": -77214441.17132865,\n  \"number\": -99870439,\n  \"type\": \"ad quis velit\",\n  \"value\": -74264678.13336876\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/transaction",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transaction"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "deleteTransactionById",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/transaction?id=pariatur minim labore",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"transaction"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "pariatur minim labore",
+									"description": "(Required) id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/transaction?id=pariatur minim labore",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transaction"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "pariatur minim labore"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						},
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/transaction?id=pariatur minim labore",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transaction"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "pariatur minim labore"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/transaction?id=pariatur minim labore",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transaction"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "pariatur minim labore"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/transaction?id=pariatur minim labore",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transaction"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "pariatur minim labore"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "getTransactionById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/transaction/account/:number",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"transaction",
+								"account",
+								":number"
+							],
+							"variable": [
+								{
+									"key": "number",
+									"value": "72192242",
+									"description": "(Required) number"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/transaction/account/:number",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transaction",
+										"account",
+										":number"
+									],
+									"variable": [
+										{
+											"key": "number",
+											"value": "72192242",
+											"description": "(Required) number"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/transaction/account/:number",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transaction",
+										"account",
+										":number"
+									],
+									"variable": [
+										{
+											"key": "number",
+											"value": "72192242",
+											"description": "(Required) number"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/transaction/account/:number",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transaction",
+										"account",
+										":number"
+									],
+									"variable": [
+										{
+											"key": "number",
+											"value": "72192242",
+											"description": "(Required) number"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/transaction/account/:number",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transaction",
+										"account",
+										":number"
+									],
+									"variable": [
+										{
+											"key": "number",
+											"value": "72192242",
+											"description": "(Required) number"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "getAccounts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/accounts",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"accounts"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/accounts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"accounts"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "*/*"
+						}
+					],
+					"cookie": [],
+					"body": "{}"
+				},
+				{
+					"name": "Unauthorized",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/accounts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"accounts"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Forbidden",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/accounts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"accounts"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Not Found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/accounts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"accounts"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "getClients",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/clients",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/clients",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"clients"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "*/*"
+						}
+					],
+					"cookie": [],
+					"body": "{}"
+				},
+				{
+					"name": "Unauthorized",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/clients",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"clients"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Forbidden",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/clients",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"clients"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Not Found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/clients",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"clients"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "getPeople",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/people",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"people"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/people",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"people"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "*/*"
+						}
+					],
+					"cookie": [],
+					"body": "{}"
+				},
+				{
+					"name": "Unauthorized",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/people",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"people"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Forbidden",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/people",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"people"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Not Found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/people",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"people"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "generateReportByClientAndBetweenTwoDates",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/report/client/:clientId?end=72192242&start=72192242",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"report",
+						"client",
+						":clientId"
+					],
+					"query": [
+						{
+							"key": "end",
+							"value": "72192242",
+							"description": "(Required) end"
+						},
+						{
+							"key": "start",
+							"value": "72192242",
+							"description": "(Required) start"
+						}
+					],
+					"variable": [
+						{
+							"key": "clientId",
+							"value": "pariatur minim labore",
+							"description": "(Required) clientId"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/report/client/:clientId?end=72192242&start=72192242",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"report",
+								"client",
+								":clientId"
+							],
+							"query": [
+								{
+									"key": "end",
+									"value": "72192242"
+								},
+								{
+									"key": "start",
+									"value": "72192242"
+								}
+							],
+							"variable": [
+								{
+									"key": "clientId",
+									"value": "pariatur minim labore",
+									"description": "(Required) clientId"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "*/*"
+						}
+					],
+					"cookie": [],
+					"body": "{}"
+				},
+				{
+					"name": "Unauthorized",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/report/client/:clientId?end=72192242&start=72192242",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"report",
+								"client",
+								":clientId"
+							],
+							"query": [
+								{
+									"key": "end",
+									"value": "72192242"
+								},
+								{
+									"key": "start",
+									"value": "72192242"
+								}
+							],
+							"variable": [
+								{
+									"key": "clientId",
+									"value": "pariatur minim labore",
+									"description": "(Required) clientId"
+								}
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Forbidden",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/report/client/:clientId?end=72192242&start=72192242",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"report",
+								"client",
+								":clientId"
+							],
+							"query": [
+								{
+									"key": "end",
+									"value": "72192242"
+								},
+								{
+									"key": "start",
+									"value": "72192242"
+								}
+							],
+							"variable": [
+								{
+									"key": "clientId",
+									"value": "pariatur minim labore",
+									"description": "(Required) clientId"
+								}
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Not Found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/report/client/:clientId?end=72192242&start=72192242",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"report",
+								"client",
+								":clientId"
+							],
+							"query": [
+								{
+									"key": "end",
+									"value": "72192242"
+								},
+								{
+									"key": "start",
+									"value": "72192242"
+								}
+							],
+							"variable": [
+								{
+									"key": "clientId",
+									"value": "pariatur minim labore",
+									"description": "(Required) clientId"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "getTransactions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/transactions",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"transactions"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/transactions",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "*/*"
+						}
+					],
+					"cookie": [],
+					"body": "{}"
+				},
+				{
+					"name": "Unauthorized",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/transactions",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Forbidden",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/transactions",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Not Found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/transactions",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "localhost:8080",
+			"type": "string"
+		}
+	]
+}
