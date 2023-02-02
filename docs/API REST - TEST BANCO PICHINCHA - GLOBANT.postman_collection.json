@@ -3139,7 +3139,7 @@
 	"variable": [
 		{
 			"key": "baseUrl",
-			"value": "localhost:8080",
+			"value": "http://ec2-54-87-120-51.compute-1.amazonaws.com:8080/",
 			"type": "string"
 		}
 	]
