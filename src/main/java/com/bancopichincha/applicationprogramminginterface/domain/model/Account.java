@@ -7,9 +7,7 @@ import lombok.NonNull;
 @Builder
 @Data
 public class Account {
-    @NonNull
     private Long number;
-    @NonNull
     private String type;
     private Double balance;
     private String state;
