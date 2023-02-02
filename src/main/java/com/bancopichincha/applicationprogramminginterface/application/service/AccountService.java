@@ -24,6 +24,11 @@ public class AccountService implements AccountUseCase {
     }
 
     @Override
+    public Optional<Account> getAccountByClientClientId(String clientId) {
+        return accountGateway.getAccountByClientClientId(clientId);
+    }
+
+    @Override
     public Account saveAccount(Account account) {
         return accountGateway.saveAccount(account);
     }

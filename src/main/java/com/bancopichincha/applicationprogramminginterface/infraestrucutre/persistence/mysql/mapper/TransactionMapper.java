@@ -19,6 +19,7 @@ public interface TransactionMapper {
     @Mapping(source = "type", target = "type")
     @Mapping(source = "value", target = "value")
     @Mapping(source = "balance", target = "balance")
+    @Mapping(source = "initialBalance", target = "initialBalance")
     @Mapping(source = "number", target = "account.number")
     TransactionDto transactionToTransactionDto(Transaction transaction);
 
@@ -27,8 +28,9 @@ public interface TransactionMapper {
     @Mapping(source = "type", target = "type")
     @Mapping(source = "value", target = "value")
     @Mapping(source = "balance", target = "balance")
+    @Mapping(source = "initialBalance", target = "initialBalance")
     @Mapping(source = "account.number", target = "number")
-    Transaction transactionToTransactionDto(TransactionDto transactionDto);
+    Transaction transactionDtoToTransaction(TransactionDto transactionDto);
 
     List<Transaction> listTransactionDtoToListTransaction(List<TransactionDto> transactionDtoList);
     List<TransactionDto> listTransactionToListTransactionDto(List<Transaction> transactionList);

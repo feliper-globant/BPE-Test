@@ -16,14 +16,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/client")
+@RequestMapping("/")
 @CrossOrigin(origins = "*")
 public class ClientController {
 
     @Autowired
     private ClientUseCase clientUseCase;
 
-    @PostMapping
+    @PostMapping("client")
     public ResponseEntity<?> createClient(@RequestBody Client client){
         try {
             var response = clientUseCase.saveClient(client);
@@ -40,7 +40,7 @@ public class ClientController {
         }
     }
 
-    @GetMapping
+    @GetMapping("client")
     public ResponseEntity<?> getClientById(@RequestParam String clientId){
         try {
             var response = clientUseCase.getClient(clientId);
@@ -57,7 +57,7 @@ public class ClientController {
         }
     }
 
-    @GetMapping("s")
+    @GetMapping("clients")
     public ResponseEntity<?> getClients(){
         try {
             var response = clientUseCase.getClients();
@@ -74,7 +74,7 @@ public class ClientController {
         }
     }
 
-    @DeleteMapping
+    @DeleteMapping("client")
     public ResponseEntity<?> deleteClientById(@RequestParam String id){
         try {
             var client = clientUseCase.getClient(id);

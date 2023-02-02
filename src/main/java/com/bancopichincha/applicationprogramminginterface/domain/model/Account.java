@@ -11,6 +11,7 @@ public class Account {
     private Long number;
     @NonNull
     private String type;
-    private Double initialBalance;
+    private Double balance;
     private String state;
+    private String clientId;
 }

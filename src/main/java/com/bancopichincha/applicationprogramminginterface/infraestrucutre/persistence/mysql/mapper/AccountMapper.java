@@ -17,22 +17,25 @@ public interface AccountMapper {
     AccountMapper ACCOUNT_INSTANCE = Mappers.getMapper(AccountMapper.class);
 
     @Mapping(source = "account.number", target = "number")
-    @ValueMapping(source = "account.type", target = "type")
-    @Mapping(source = "account.initialBalance", target = "initialBalance")
-    @ValueMapping(source = "account.state", target = "state")
+    @Mapping(source = "account.type", target = "type")
+    @Mapping(source = "account.balance", target = "balance")
+    @Mapping(source = "account.state", target = "state")
+    @Mapping(source = "account.clientId", target = "client.clientId")
     AccountDto accountToAccountDto(Account account);
 
     @Mapping(source = "account.number", target = "number")
     @Mapping(source = "account.type", target = "type")
-    @Mapping(source = "account.initialBalance", target = "initialBalance")
+    @Mapping(source = "account.balance", target = "balance")
     @Mapping(source = "account.state", target = "state")
     @Mapping(source = "transactions", target = "transactions")
+    @Mapping(source = "account.clientId", target = "client.clientId")
     AccountDto accountToAccountDtoWithTransaction(Account account, Set<Transaction> transactions);
 
     @Mapping(source = "accountDto.number", target = "number")
     @Mapping(source = "accountDto.type", target = "type")
-    @Mapping(source = "accountDto.initialBalance", target = "initialBalance")
+    @Mapping(source = "accountDto.balance", target = "balance")
     @Mapping(source = "accountDto.state", target = "state")
+    @Mapping(source = "accountDto.client.clientId", target = "clientId")
     Account accountDtoToAccount(AccountDto accountDto);
 
     List<Account> listAccountDtoToListAccount(List<AccountDto> accountDtoList);

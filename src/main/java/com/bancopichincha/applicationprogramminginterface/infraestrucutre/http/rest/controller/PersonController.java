@@ -16,14 +16,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/person")
+@RequestMapping("/")
 @CrossOrigin(origins = "*")
 public class PersonController {
 
     @Autowired
     private PersonUseCase personUseCase;
 
-    @PostMapping
+    @PostMapping("person")
     public ResponseEntity<?> createPerson(@RequestBody Person person){
         try {
             var response = personUseCase.savePerson(person);
@@ -40,7 +40,7 @@ public class PersonController {
         }
     }
 
-    @GetMapping
+    @GetMapping("person")
     public ResponseEntity<?> getPersonById(@RequestParam Long id){
         try {
             var response = personUseCase.getPerson(id);
@@ -57,7 +57,7 @@ public class PersonController {
         }
     }
 
-    @GetMapping("/people")
+    @GetMapping("people")
     public ResponseEntity<?> getPeople(){
         try {
             var response = personUseCase.getAllPeople();
@@ -74,7 +74,7 @@ public class PersonController {
         }
     }
 
-    @DeleteMapping
+    @DeleteMapping("person")
     public ResponseEntity<?> deletePersonById(@RequestParam Long id){
         try {
             var person = personUseCase.getPerson(id);

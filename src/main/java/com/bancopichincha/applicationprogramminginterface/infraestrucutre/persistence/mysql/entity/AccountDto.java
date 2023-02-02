@@ -2,12 +2,13 @@ package com.bancopichincha.applicationprogramminginterface.infraestrucutre.persi
 
 import lombok.Data;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import java.util.Set;
 
@@ -23,11 +24,15 @@ public class AccountDto {
     @Column(name = "type", updatable = false, nullable = false)
     private String type;
 
-    @Column(name = "initial_balance", nullable = false)
-    private Double initialBalance;
+    @Column(name = "balance", nullable = false)
+    private Double balance;
 
     @Column(name = "state", updatable = false, nullable = false)
     private String state;
+
+    @OneToOne(cascade = CascadeType.REMOVE, orphanRemoval = true)
+    @JoinColumn(name = "client_id", referencedColumnName = "client_id")
+    private ClientDto client;
 
     @OneToMany(mappedBy="account")
     private Set<TransactionDto> transactions;

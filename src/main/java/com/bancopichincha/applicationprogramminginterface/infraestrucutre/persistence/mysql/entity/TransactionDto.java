@@ -40,6 +40,9 @@ public class TransactionDto {
     @Column(name = "balance", updatable = false, nullable = false, columnDefinition = "DOUBLE default 0")
     private Double balance;
 
+    @Column(name = "initial_balance", updatable = false, nullable = false, columnDefinition = "DOUBLE default 0")
+    private Double initialBalance;
+
     @ManyToOne
     @JoinColumn(name="number", nullable=false)
     private AccountDto account;

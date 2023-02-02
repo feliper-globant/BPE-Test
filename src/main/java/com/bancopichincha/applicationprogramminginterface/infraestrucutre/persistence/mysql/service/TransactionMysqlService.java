@@ -7,9 +7,9 @@ import com.bancopichincha.applicationprogramminginterface.infraestrucutre.persis
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 @Service
 public class TransactionMysqlService implements TransactionGateway {
@@ -27,9 +27,21 @@ public class TransactionMysqlService implements TransactionGateway {
     }
 
     @Override
+    public List<Transaction> getTransactionsByAccountNumberBetweenDates(Long number, Date start, Date end) {
+        return transactionMapper.listTransactionDtoToListTransaction(
+                transactionRepository.getTransactionsByAccountNumberBetweenDates(number, start, end)
+        );
+    }
+
+    @Override
+    public List<Transaction> getTransactionsByAccountNumber(Long number) {
+        return transactionMapper.listTransactionDtoToListTransaction(transactionRepository.findAllByAccountNumber(number));
+    }
+
+    @Override
     public Optional<Transaction> getTransaction(String id) {
         return Optional.ofNullable(
-                transactionMapper.transactionToTransactionDto(
+                transactionMapper.transactionDtoToTransaction(
                         transactionRepository.findById(id).get()
                 )
         );
@@ -44,5 +56,14 @@ public class TransactionMysqlService implements TransactionGateway {
     @Override
     public void deleteTransaction(Transaction transaction) {
         transactionRepository.delete(transactionMapper.transactionToTransactionDto(transaction));
+    }
+
+    @Override
+    public Optional<Transaction> getLastTransactionByNumber(Long number) {
+        return Optional.ofNullable(
+                transactionMapper.transactionDtoToTransaction(
+                        transactionRepository.findFirstByAccountNumberOrderByDateDesc(number)
+                )
+        );
     }
 }

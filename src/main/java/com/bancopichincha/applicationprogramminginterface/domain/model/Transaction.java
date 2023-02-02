@@ -19,4 +19,5 @@ public class Transaction {
     private String type;
     private Double value;
     private Double balance;
+    private Double initialBalance;
 }

@@ -36,6 +36,9 @@ dependencies {
 
     annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
 
+    // https://mvnrepository.com/artifact/org.everit.json/org.everit.json.schema
+    implementation 'org.everit.json:org.everit.json.schema:1.0.0'
+
 }
 
 tasks.named('test') {

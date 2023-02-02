@@ -32,6 +32,9 @@ public class ClientDto {
     @Column(name = "state", length=36, columnDefinition = "varchar(60)")
     private String state;
 
+    @OneToOne(mappedBy = "client")
+    private AccountDto account;
+
     @OneToOne(cascade = CascadeType.REMOVE, orphanRemoval = true)
     @JoinColumn(name = "person_id", referencedColumnName = "id")
     private PersonDto person;

@@ -16,14 +16,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/account")
+@RequestMapping("/")
 @CrossOrigin(origins = "*")
 public class AccountController {
 
     @Autowired
     private AccountUseCase accountUseCase;
 
-    @PostMapping
+    @PostMapping("account")
     public ResponseEntity<?> createAccount(@RequestBody Account account){
         try {
             var response = accountUseCase.saveAccount(account);
@@ -40,7 +40,7 @@ public class AccountController {
         }
     }
 
-    @GetMapping
+    @GetMapping("account")
     public ResponseEntity<?> getAccountByNumber(@RequestParam Long number){
         try {
             var response = accountUseCase.getAccount(number);
@@ -57,7 +57,7 @@ public class AccountController {
         }
     }
 
-    @GetMapping("s")
+    @GetMapping("accounts")
     public ResponseEntity<?> getAccounts(){
         try {
             var response = accountUseCase.getAccounts();
@@ -74,7 +74,7 @@ public class AccountController {
         }
     }
 
-    @DeleteMapping
+    @DeleteMapping("account")
     public ResponseEntity<?> deleteAccountById(@RequestParam Long number){
         try {
             var account = accountUseCase.getAccount(number);

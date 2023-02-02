@@ -30,8 +30,8 @@ public class UseCaseConfiguration {
     }
 
     @Bean
-    public TransactionService transactionService(TransactionGateway transactionGateway){
-        return new TransactionService(transactionGateway);
+    public TransactionService transactionService(TransactionGateway transactionGateway, AccountGateway accountGateway){
+        return new TransactionService(transactionGateway, accountGateway);
     }
 
 }

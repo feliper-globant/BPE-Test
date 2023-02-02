@@ -36,6 +36,15 @@ public class AccountMySqlService implements AccountGateway {
     }
 
     @Override
+    public Optional<Account> getAccountByClientClientId(String clientId) {
+        return Optional.ofNullable(
+                accountMapper.accountDtoToAccount(
+                        accountRepository.findByClientClientId(clientId)
+                )
+        );
+    }
+
+    @Override
     public Account saveAccount(Account account) {
         accountRepository.save(accountMapper.accountToAccountDto(account));
         return account;
